@@ -1,0 +1,31 @@
+<div class=@Classes style="background-image: url(@ImageUrl)" onclick="document.getElementById('filepicker').click();" >
+    <InputFile id="filepicker" style="display: none" type="file" accept="image/*" OnChange="e => ImportImage(e)" />
+</div>
+@code {
+    private string classes = ImageClassCss;
+    private const string ImageClassCss = "d-and-d-image";
+
+    [Parameter] public string Name { get; set; } = "";
+
+    [Parameter]
+    public string Classes
+    {
+        get => classes;
+        set => classes = $"{ImageClassCss} {value}";
+    }
+
+    [Parameter] public string Appearance { get; set; } = "";
+    private string ImageUrl { get; set; } = "";
+    private string ElementId => $"{ImageClassCss}-{Name}";
+
+
+    private void ImportImage(InputFileChangeEventArgs changeEventArgs)
+    {
+      Console.WriteLine("Hello");
+        foreach (var e in changeEventArgs.GetMultipleFiles(1))
+        {
+            Console.WriteLine(e.Name);
+        }
+    }
+    
+}

@@ -1,4 +1,4 @@
-.d-and-d-character-sheet {
+d-and-d-character-sheet {
   font-size: 10px;
 }
 
@@ -357,26 +357,6 @@
   text-indent: 200px;
 }
 
-.d-and-d-character-sheet .d-and-d-image {
-  height: 438px;
-  width: 100%;
-  cursor: pointer;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.d-and-d-character-sheet .d-and-d-image :hover {
-  opacity: .7;
-}
-
-.d-and-d-character-sheet .d-and-d-image.faction {
-  height: 340px;
-  border-radius: 50%;
-  border: 3px solid black;
-  background-color: white;
-  margin: -10px -15px;
-  width: calc(100% + 30px);
-}
 
 .d-and-d-character-sheet .border-right {
   border-right: 1px solid rgb(207, 207, 207);

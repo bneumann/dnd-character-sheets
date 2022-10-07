@@ -1,0 +1,23 @@
+<div class={classes}>
+    <div class="d-and-d-statrow-value">
+        <input type="text" value="Value" @onchange="(args) => ValueChange(args, Value)" />
+    </div>
+    <div class="d-and-d-statrow-label">
+        <label>@Label</label>
+    </div>
+</div>
+
+@code {
+
+    public string Value;
+    public object Label { get; set; }
+    [Parameter] public EventCallback<string> OnValueChange { get; set; }
+
+    private async Task ValueChange(ChangeEventArgs args, string value)
+    {
+      await OnValueChange.InvokeAsync(value);
+    }
+
+}
+
+
