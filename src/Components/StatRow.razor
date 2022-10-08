@@ -1,6 +1,6 @@
-<div class={classes}>
+<div class=@Classes>
     <div class="d-and-d-statrow-value">
-        <input type="text" value="Value" @onchange="(args) => ValueChange(args, Value)" />
+        <input type="text" @onchange="value => UpdateValue(value)" />
     </div>
     <div class="d-and-d-statrow-label">
         <label>@Label</label>
@@ -8,16 +8,25 @@
 </div>
 
 @code {
+    private const string StatRowClassCss = "d-and-d-statrow";
 
-    public string Value;
-    public object Label { get; set; }
-    [Parameter] public EventCallback<string> OnValueChange { get; set; }
+    [Parameter]
+    public string Value { get; set; }
+    [Parameter]
+    public string Label { get; set; }
 
-    private async Task ValueChange(ChangeEventArgs args, string value)
+    private string classes;
+  [Parameter]
+    public string Classes
     {
-      await OnValueChange.InvokeAsync(value);
+        get => classes;
+        set => classes = $"{StatRowClassCss} {value}";
+    }
+    [Parameter]
+    public EventCallback<string> ValueChanged { get; set; }
+    private async Task UpdateValue(ChangeEventArgs value)
+    {
+        await ValueChanged.InvokeAsync((string)value.Value);
     }
 
 }
-
-
