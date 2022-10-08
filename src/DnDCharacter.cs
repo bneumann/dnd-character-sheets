@@ -11,64 +11,64 @@ public class DnDCharacter
   public string Xp { get; set; }
   public string DciNo { get; set; }
 
-  public string Str { get; set; }
-  public string Dex { get; set; }
-  public string Con { get; set; }
-  public string Int { get; set; }
-  public string Wis { get; set; }
-  public string Cha { get; set; }
+  public int Str { get; set; }
+  public int Dex { get; set; }
+  public int Con { get; set; }
+  public int Int { get; set; }
+  public int Wis { get; set; }
+  public int Cha { get; set; }
 
   public string Inspiration { get; set; }
   public string ProficiencyBonus { get; set; }
 
-  public string StrSave { get; set; }
+  public int StrSave { get; set; }
   public bool StrSaveChecked { get; set; }
-  public string DexSave { get; set; }
+  public int DexSave { get; set; }
   public bool DexSaveChecked { get; set; }
-  public string ConSave { get; set; }
+  public int ConSave { get; set; }
   public bool ConSaveChecked { get; set; }
-  public string IntSave { get; set; }
+  public int IntSave { get; set; }
   public bool IntSaveChecked { get; set; }
-  public string WisSave { get; set; }
+  public int WisSave { get; set; }
   public bool WisSaveChecked { get; set; }
-  public string ChaSave { get; set; }
+  public int ChaSave { get; set; }
   public bool ChaSaveChecked { get; set; }
 
-  public string SkillAcrobatics { get; set; }
+  public int SkillAcrobatics { get; set; }
   public bool SkillAcrobaticsChecked { get; set; }
-  public string SkillAnimalHandling { get; set; }
+  public int SkillAnimalHandling { get; set; }
   public bool SkillAnimalHandlingChecked { get; set; }
-  public string SkillArcana { get; set; }
+  public int SkillArcana { get; set; }
   public bool SkillArcanaChecked { get; set; }
-  public string SkillAthletics { get; set; }
+  public int SkillAthletics { get; set; }
   public bool SkillAthleticsChecked { get; set; }
-  public string SkillDeception { get; set; }
+  public int SkillDeception { get; set; }
   public bool SkillDeceptionChecked { get; set; }
-  public string SkillHistory { get; set; }
+  public int SkillHistory { get; set; }
   public bool SkillHistoryChecked { get; set; }
-  public string SkillInsight { get; set; }
+  public int SkillInsight { get; set; }
   public bool SkillInsightChecked { get; set; }
-  public string SkillIntimidation { get; set; }
+  public int SkillIntimidation { get; set; }
   public bool SkillIntimidationChecked { get; set; }
-  public string SkillInvestigation { get; set; }
+  public int SkillInvestigation { get; set; }
   public bool SkillInvestigationChecked { get; set; }
-  public string SkillMedicine { get; set; }
+  public int SkillMedicine { get; set; }
   public bool SkillMedicineChecked { get; set; }
-  public string SkillNature { get; set; }
+  public int SkillNature { get; set; }
   public bool SkillNatureChecked { get; set; }
-  public string SkillPerception { get; set; }
+  public int SkillPerception { get; set; }
   public bool SkillPerceptionChecked { get; set; }
-  public string SkillPerformance { get; set; }
+  public int SkillPerformance { get; set; }
   public bool SkillPerformanceChecked { get; set; }
-  public string SkillPersuasion { get; set; }
+  public int SkillPersuasion { get; set; }
   public bool SkillPersuasionChecked { get; set; }
-  public string SkillReligion { get; set; }
+  public int SkillReligion { get; set; }
   public bool SkillReligionChecked { get; set; }
-  public string SkillSlightOfHand { get; set; }
+  public int SkillSlightOfHand { get; set; }
   public bool SkillSlightOfHandChecked { get; set; }
-  public string SkillStealth { get; set; }
+  public int SkillStealth { get; set; }
   public bool SkillStealthChecked { get; set; }
-  public string SkillSurvival { get; set; }
+  public int SkillSurvival { get; set; }
   public bool SkillSurvivalChecked { get; set; }
 
   public string PassivePerception { get; set; }

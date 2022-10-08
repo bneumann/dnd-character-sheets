@@ -1,0 +1,32 @@
+.d-and-d-skill-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.d-and-d-skill-circle.active {
+  background-color: rgb(207, 207, 207);
+}
+
+.d-and-d-skill input {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 25px;
+  margin: 0 10px;
+  text-align: center;
+  background: none;
+}
+
+
+.d-and-d-skill label {
+  margin-bottom: 5px;
+}
+
+.d-and-d-skill .d-and-d-skill-hint {
+  margin-left: 4px;
+  color: rgb(150, 150, 150);
+}

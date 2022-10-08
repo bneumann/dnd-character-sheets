@@ -1,0 +1,117 @@
+<div class="d-and-d-character-sheet container-xl mt-5 mb-5">
+    <div>
+        <div class="row mb-4">
+            <div class="col-md-3 ps-2 pe-2">
+                <div class="d-and-d-page-title">D&D</div>
+                <div class="d-and-d-attribute-collection char-name pe-3 ps-3">
+                    <input type="text" @bind-value="@Character.Name" />
+                </div>
+                <label style="width: 100%; text-align: right; text-transform: uppercase; font-size: 11px">Character Name</label>
+            </div>
+            <div class="col-md-9 pe-2 ps-2">
+                <div class="d-and-d-attribute-collection pe-3 ps-3" style="height: 140px">
+                    <div class="row ps-3 pe-3">
+                        <div class="col-md-3 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.ClassLevel" />
+                            <label>Class & Level</label>
+                        </div>
+                        <div class="col-md-3 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.Background" />
+                            <label>Background</label>
+                        </div>
+                        <div class="col-md-3 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.PlayerName" />
+                            <label>Player Name</label>
+                        </div>
+                        <div class="col-md-3 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.Faction" />
+                            <label>Faction</label>
+                        </div>
+                    </div>
+                    <div class="row ps-3 pe-3">
+                        <div class="col-md-3 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.Race" />
+                            <label>Race</label>
+                        </div>
+                        <div class="col-md-3 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.Alignment" />
+                            <label>Alignment</label>
+                        </div>
+                        <div class="col-md-3 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.Xp" />
+                            <label>Experience Points</label>
+                        </div>
+                        <div class="col-md-3 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.DciNo" />
+                            <label>DCI Number</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-4 pr-1">
+                        <div class="d-and-d-box gray">
+                            <StatBox Label="Strength" Name="str" @bind-Value=@Character.Str />
+                            <StatBox Label="Dexterity" Name="dex" @bind-Value=@Character.Dex />
+                            <StatBox Label="Constitution" Name="con" @bind-Value=@Character.Con />
+                            <StatBox Label="Intelligence" Name="int" @bind-Value=@Character.Int />
+                            <StatBox Label="Wisdom" Name="wis" @bind-Value=@Character.Wis />
+                            <StatBox Label="Charisma" Name="cha" @bind-Value=@Character.Cha />
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+                        <StatRow Label="Inspiration" Name="inspiration" @bind-Value=@Character.Inspiration />
+                        <StatRow Label="Proficiency Bonus" Name="proficiencyBonus" @bind-Value=@Character.ProficiencyBonus Classes="rounded" />
+                        <div class="d-and-d-box">
+                            <div style="text-align: left">
+                                <Skill Label="Strength" @bind-Value="@Character.StrSave" @bind-Checked="@Character.StrSaveChecked" />
+                                <Skill Label="Dexterity" @bind-Value="@Character.DexSave" @bind-Checked="@Character.DexSaveChecked" />
+                                <Skill Label="Constitution" @bind-Value="@Character.ConSave" @bind-Checked="@Character.ConSaveChecked" />
+                                <Skill Label="Intelligence" @bind-Value="@Character.IntSave" @bind-Checked="@Character.IntSaveChecked" />
+                                <Skill Label="Wisdom" @bind-Value="@Character.WisSave" @bind-Checked="@Character.WisSaveChecked" />
+                                <Skill Label="Charisma" @bind-Value="@Character.ChaSave" @bind-Checked="@Character.ChaSaveChecked" />
+                            </div>
+                            <label class="d-and-d-title" style="margin-top: 10px">Saving Throws</label>
+                        </div>
+                        <div class="d-and-d-box">
+                            <div style="text-align: left">
+                                <Skill Label="Acrobatics" Ability="Dex" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Animal Handling" Ability="Wis" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Arcana" Ability="Int" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Athletics" Ability="Str" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Deception" Ability="CHa" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="History" Ability="Int" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Insight" Ability="Wis" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Intimidation" Ability="Cha" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Investigation" Ability="Int" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Medicine" Ability="Iws" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Nature" Ability="Int" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Perception" Ability="Wis" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Performance" Ability="Cha" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Persuasion" Ability="Cha" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Religion" Ability="Int" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Sleight of Hand" Ability="Dex" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Stealth" Ability="Dex" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                                <Skill Label="Survival" Ability="Wis" @bind-Value="@Character.SkillAcrobatics" @bind-Checked="@Character.SkillAcrobaticsChecked" />
+                            </div>
+                            <label class="d-and-d-title" style="margin-top: 10px">Skills</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @PrintCharacter
+</div>
+
+@code {
+
+    public DnDCharacter Character { get; set; } = new();
+
+    private string PrintCharacter => System.Text.Json.JsonSerializer.Serialize(Character);
+}

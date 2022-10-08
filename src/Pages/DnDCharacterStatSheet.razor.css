@@ -1,0 +1,361 @@
+.d-and-d-character-sheet {
+  font-size: 10px;
+}
+
+.d-and-d-character-sheet input[type=text] {
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.d-and-d-character-sheet .d-and-d-page-title {
+  font-size: 42px;
+  text-align: center;
+  color: rgb(204, 10, 33);
+  font-weight: bold;
+  font-family: cursive;
+}
+
+.d-and-d-character-sheet textarea
+{
+  line-height: 25px;
+  background-image: linear-gradient(transparent, transparent calc(25px - 1px), rgb(207, 207, 207) 0px);
+  background-size: 100% calc(25px + 0px);
+  width: 100%;
+  border: none;
+  resize: none;
+  background-position-y: -2px;
+}
+
+.d-and-d-character-sheet .d-and-d-box {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.d-and-d-character-sheet .d-and-d-box.noborder {
+  border: none;
+}
+
+.d-and-d-character-sheet .d-and-d-box.square {
+  border-radius: 0px;
+}
+
+.d-and-d-character-sheet .d-and-d-box.white {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.d-and-d-character-sheet .d-and-d-box.gray {
+  background-color: rgb(207, 207, 207);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.d-and-d-box .d-and-d-title {
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  font-weight: bold;
+  font-size: 10px;
+  margin-bottom: 0px;
+}
+
+
+.d-and-d-character-sheet .d-and-d-attribute-collection {
+  border: 2px solid black;
+  border-top-left-radius: 15px 50%;
+  border-bottom-left-radius: 15px 50%;
+  border-top-right-radius: 15px 50%;
+  border-bottom-right-radius: 15px 50%;
+  padding-bottom: 5px;
+  background-color: white;
+}
+.d-and-d-character-sheet .d-and-d-attribute-collection.gray {
+  background-color: rgb(207, 207, 207);
+}
+
+.d-and-d-character-sheet .d-and-d-attribute-collection input {
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 16px;
+}
+.d-and-d-character-sheet .d-and-d-attribute-collection label {
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .d-and-d-character-sheet .d-and-d-attribute-collection.char-name {
+    width: calc(100% + 50px);
+  }
+}
+
+
+.d-and-d-character-sheet .d-and-d-attribute-collection.char-name input {
+  padding-left: 10px;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-bottom: none;
+}
+
+.d-and-d-character-sheet .d-and-d-statbox.shield {
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.d-and-d-character-sheet .d-and-d-statbox.shield .d-and-d-statbox-modifier input {
+  margin-bottom: 2px;
+}
+
+.d-and-d-character-sheet .d-and-d-statbox label.label-top {
+  margin-bottom: 0;
+}
+
+.d-and-d-character-sheet input.d-and-d-cinput {
+  text-align: center;
+  font-size: 24px;
+  margin: 0px 0;
+}
+
+.d-and-d-character-sheet input.d-and-d-linput {
+  border: none;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.d-and-d-character-sheet .d-and-d-gray-text {
+  color: rgb(100, 100, 100);
+}
+
+.d-and-d-character-sheet .d-and-d-gray-text input.d-and-d-linput {
+  border-bottom: 1px solid rgb(207, 207, 207);
+  flex-wrap: wrap;
+
+}
+
+.d-and-d-character-sheet .d-and-d-deathsave {
+  margin: 5px 0;
+}
+.d-and-d-character-sheet .d-and-d-deathsave label {
+  text-transform: uppercase;
+  width: 55px;
+  text-align: right;
+  margin-right: 10px;
+}
+.d-and-d-character-sheet .d-and-d-deathsave .d-and-d-skill-circle {
+  height: 12px;
+  width: 12px;
+}
+
+.d-and-d-character-sheet .d-and-d-save-success .d-and-d-skill-circle.active {
+  background-color: rgb(0, 50, 255)
+}
+.d-and-d-character-sheet .d-and-d-save-failure .d-and-d-skill-circle.active {
+  background-color: rgb(204, 10, 33)
+}
+
+.d-and-d-character-sheet .d-and-d-table {
+  margin-bottom: 3px;
+}
+.d-and-d-character-sheet .d-and-d-table thead {
+  color: rgb(100, 100, 100);
+  text-transform: uppercase;
+}
+.d-and-d-character-sheet .d-and-d-table input {
+  background-color: rgb(225, 225, 225);
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin: 1px 0;
+}
+
+
+.d-and-d-character-sheet .d-and-d-currency {
+  position: relative;
+  margin: 10px 0 20px;
+}
+.d-and-d-character-sheet .d-and-d-currency:last-child {
+  margin-bottom: 0;
+}
+.d-and-d-character-sheet .d-and-d-currency .d-and-d-currency-label {
+  margin-left: -10px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 50% 0 0 50%;
+  width: 50px;
+  z-index: 0;
+  padding: 5px;
+  font-size: 12px;
+  display: inline-block;
+}
+.d-and-d-character-sheet .d-and-d-currency .d-and-d-currency-label label {
+  margin: 0;
+  font-weight: bold;
+  color: rgb(100, 100, 100);
+}
+.d-and-d-character-sheet .d-and-d-currency .d-and-d-currency-value {
+  border: 2px solid black;
+  background-color: white;
+  width: 90px;
+  height: 45px;
+  border-top-left-radius: 15px 50%;
+  border-bottom-left-radius: 15px 50%;
+  border-top-right-radius: 15px 50%;
+  border-bottom-right-radius: 15px 50%;
+  z-index: 1;
+  position: absolute;
+  top: -5px;
+  left: 15px;
+}
+.d-and-d-character-sheet .d-and-d-currency .d-and-d-currency-value input {
+  margin: 3px 0;
+  padding: 6px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.d-and-d-character-sheet .d-and-d-equipment-indent::first-line, .d-and-d-character-sheet .d-and-d-equipment-indent::nth-line(-n+2) {
+  text-indent: 200px;
+}
+
+
+.d-and-d-character-sheet .border-right {
+  border-right: 1px solid rgb(207, 207, 207);
+}
+
+/* .d-and-d-character-sheet .d-and-d-faction-input {
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  left: 50%;
+  margin-left: 25%;
+  width: 50%;
+}
+
+.d-and-d-character-sheet .d-and-d-faction-input label {
+  text-transform: uppercase;
+  color: rgb(150, 150, 150);
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.d-and-d-character-sheet .d-and-d-faction-input input {
+  background-color: rgb(225, 225, 225);
+  border-top-left-radius: 50px 100%;
+  border-top-right-radius: 50px 100%;
+  padding: 5px 5px;
+  margin: 1px 0;
+  text-align: center;
+  font-size: 14px;
+} */
+
+.d-and-d-character-sheet .d-and-d-attribute-collection .d-and-d-statbox {
+  height: auto;
+}
+.d-and-d-character-sheet .d-and-d-attribute-collection .d-and-d-statbox input {
+  border: none;
+}
+.d-and-d-character-sheet .d-and-d-attribute-collection .d-and-d-statbox.type2 {
+  margin-bottom: 5px;
+}
+
+.d-and-d-character-sheet .d-and-d-spelllist {
+  margin-bottom: 30px;
+}
+.d-and-d-character-sheet .d-and-d-spelllist .d-and-d-spell-header {
+  border: 2px solid black;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.d-and-d-character-sheet .d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-level {
+  position: absolute;
+  border: 2px solid black;
+  background-color: white;
+  width: 30px;
+  border-top-right-radius: 15px 50%;
+  border-bottom-right-radius: 15px 50%;
+  height: calc(100% + 10px);
+  font-size: 16px;
+  padding: 8px 0 8px 7px;
+  left: -5px;
+  top: -5px;
+}
+.d-and-d-character-sheet .d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots {
+  width: 100%;
+  padding-left: 30px;
+  height: 36px;
+}
+.d-and-d-character-sheet .d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots label {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+.d-and-d-character-sheet .d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots .d-and-d-spell-slots-total {
+  width: 70px;
+  display: inline-block;
+  font-size: 16px;
+  border-right: 2px solid black;
+  border-top-right-radius: 15px 50%;
+  border-bottom-right-radius: 15px 50%;
+  padding: 5px 5px 5px 0;
+}
+.d-and-d-character-sheet .d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots .d-and-d-spell-slots-total input {
+  text-align: center;
+  width: 55px;
+}
+.d-and-d-character-sheet .d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots .d-and-d-spell-slots-remaining {
+  display: inline-block;
+  width: calc(100% - 70px);
+  text-align: center;
+  height: 100%;
+  vertical-align: top;
+  padding: 10px 0;
+  overflow: hidden;
+}
+.d-and-d-character-sheet .d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots .d-and-d-spell-slots-remaining .d-and-d-skill-circle {
+  margin: 0 3px;
+}
+.d-and-d-character-sheet .d-and-d-spelllist table {
+  width: 100%;
+  position: relative;
+}
+.d-and-d-character-sheet .d-and-d-spelllist table .d-and-d-skill-circle {
+  margin-left: 3px;
+}
+.d-and-d-character-sheet .d-and-d-spelllist table th {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 6px;
+}
+.d-and-d-character-sheet .d-and-d-spelllist table tr input {
+  width: 100%;
+  border-bottom: 1px solid rgb(150, 150, 150);
+  font-size: 15px;
+}
+.d-and-d-character-sheet .d-and-d-spelllist table .d-and-d-spell-prepared {
+  width: 25px;
+}
+
+.d-and-d-character-sheet .d-and-d-spelllist .d-and-d-spell-header-labels div {
+  display: inline-block;
+}
+.d-and-d-character-sheet .d-and-d-spelllist .d-and-d-spell-header-labels label {
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 6px;
+}
+
+* {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}
