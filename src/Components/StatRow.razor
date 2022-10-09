@@ -11,7 +11,7 @@
     private const string StatRowClassCss = "d-and-d-statrow";
 
     [Parameter]
-    public string Value { get; set; }
+    public int Value { get; set; }
     [Parameter]
     public string Label { get; set; }
 
@@ -26,10 +26,11 @@
         set => classes = $"{StatRowClassCss} {value}";
     }
     [Parameter]
-    public EventCallback<string> ValueChanged { get; set; }
-    private async Task UpdateValue(ChangeEventArgs value)
+    public EventCallback<int> ValueChanged { get; set; }
+    private async Task UpdateValue(ChangeEventArgs args)
     {
-        await ValueChanged.InvokeAsync((string)value.Value);
+        int.TryParse((string)args.Value, out var value);
+        await ValueChanged.InvokeAsync(value);
     }
 
 }

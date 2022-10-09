@@ -18,8 +18,8 @@ public class DnDCharacter
   public int Wis { get; set; }
   public int Cha { get; set; }
 
-  public string Inspiration { get; set; }
-  public string ProficiencyBonus { get; set; }
+  public int Inspiration { get; set; }
+  public int ProficiencyBonus { get; set; }
 
   public int StrSave { get; set; }
   public bool StrSaveChecked { get; set; }
@@ -71,10 +71,10 @@ public class DnDCharacter
   public int SkillSurvival { get; set; }
   public bool SkillSurvivalChecked { get; set; }
 
-  public string PassivePerception { get; set; }
+  public int PassivePerception { get; set; }
   public string OtherProficiencies { get; set; }
 
-  public string Ac { get; set; }
+  public int Ac { get; set; }
   public string Init { get; set; }
   public string Speed { get; set; }
 
@@ -124,7 +124,7 @@ public class DnDCharacter
   public string AdditionalFeatures { get; set; }
   public string AdditionalFeatures2 { get; set; }
 
-  public string TotalNonConsumableMagicItems { get; set; }
+  public int TotalNonConsumableMagicItems { get; set; }
   public string Treasure { get; set; }
   public string Treasure2 { get; set; }
 

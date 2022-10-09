@@ -103,10 +103,30 @@
                         </div>
                     </div>
                 </div>
+                <div class="mt-2">
+                    <StatRow Classes="rounded rounded-sides" Label="Passive Wisdom (Perception)" @bind-Value=@Character.PassivePerception />
+                </div>
+                <div class="d-and-d-box mt-4">
+                    <textarea @bind="@Character.OtherProficiencies" @bind:event="oninput" rows=12></textarea>
+                    <label class="d-and-d-title" style="margin-top: 10px">
+                        Other Proficiencies & Languages
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="d-and-d-box gray">
+                    <div class="row">
+                        <div class="col-4 pe-2">
+                            <StatBox2 Classes="shield" TopLabel="Armour" Label="Class" @bind-Value="Character.Ac" />
+                        </div>
+                    </div>
+                </div>
+                @PrintCharacter
             </div>
         </div>
     </div>
-    @PrintCharacter
 </div>
 
 @code {
@@ -114,4 +134,4 @@
     public DnDCharacter Character { get; set; } = new();
 
     private string PrintCharacter => System.Text.Json.JsonSerializer.Serialize(Character);
-}
+    }
