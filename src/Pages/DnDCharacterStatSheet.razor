@@ -55,7 +55,7 @@
                 <div class="row">
                     <div class="col-4 pr-1">
                         <div class="d-and-d-box gray">
-                            <StatBox Label="Strength" Name="str" @bind-Value=@Character.Str />
+                            <StatBox Label="Strength" Name="str" @bind-Value="@Character.Str" />
                             <StatBox Label="Dexterity" Name="dex" @bind-Value=@Character.Dex />
                             <StatBox Label="Constitution" Name="con" @bind-Value=@Character.Con />
                             <StatBox Label="Intelligence" Name="int" @bind-Value=@Character.Int />
@@ -118,12 +118,29 @@
             <div class="col-md-4">
                 <div class="d-and-d-box gray">
                     <div class="row">
-                        <div class="col-4 pe-2">
+                        <div class="col-4 pe-2 ps-2">
                             <StatBox2 Classes="shield" TopLabel="Armour" Label="Class" @bind-Value="Character.Ac" />
                         </div>
+                        <div class="col-4 pe-2">
+                            <StatBox2 Label="Initiative" @bind-Value="Character.Init" />
+                        </div>
+                        <div class="col-4 ps-2">
+                            <StatBox2 Label="Speed" @bind-Value="Character.Speed" />
+                        </div>
+                    </div>
+                    <div class="d-and-d-box white mt-1 pb-1 mb-2" style="border-radius: 8px 8px 0 0;">
+                        <div class="d-and-d-gray-text">
+                            <label style="width:95px">Hit Point Maximum</label>
+                            <input class="d-and-d-linput" style="width: calc(100% - 100px)" type="text" @bind-value="@Character.MaxHp" />
+                        </div>
+                        <input class="d-and-d-cinput" type="text" @bind-value="@Character.Hp" />
+                        <label class="d-and-d-title" style="margin-top: 5px">Current Hit Points</label>
+                    </div>
+                    <div class="d-and-d-box white mb-2 pb-2" style="border-radius: 0 0 8px 8px;">
+                        <input class="d-and-d-cinput" type="text" @bind-value="@Character.TempHp" />
+                        <label class="d-and-d-title mt-1">Temporary Hit Points</label>
                     </div>
                 </div>
-                @PrintCharacter
             </div>
         </div>
     </div>
@@ -131,7 +148,7 @@
 
 @code {
 
+    [Parameter]
     public DnDCharacter Character { get; set; } = new();
 
-    private string PrintCharacter => System.Text.Json.JsonSerializer.Serialize(Character);
     }

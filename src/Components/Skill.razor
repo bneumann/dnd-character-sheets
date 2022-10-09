@@ -1,6 +1,6 @@
 <div class=@Classes>
     <div class="@CheckedClass()" @onclick="_ => UpdateChecked()"></div>
-    <input type="text" @onchange="args => UpdateValue(args)" />
+    <input type="text" @onchange="args => UpdateValue(args)" value="@Value"/>
     <label>@Label</label>
     @if (!string.IsNullOrWhiteSpace(Ability))
     {

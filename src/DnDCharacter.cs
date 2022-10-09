@@ -75,12 +75,12 @@ public class DnDCharacter
   public string OtherProficiencies { get; set; }
 
   public int Ac { get; set; }
-  public string Init { get; set; }
-  public string Speed { get; set; }
+  public int Init { get; set; }
+  public int Speed { get; set; }
 
-  public string MaxHp { get; set; }
-  public string Hp { get; set; }
-  public string TempHp { get; set; }
+  public int MaxHp { get; set; }
+  public int Hp { get; set; }
+  public int TempHp { get; set; }
 
   public string HitDiceMax { get; set; }
   public string HitDice { get; set; }

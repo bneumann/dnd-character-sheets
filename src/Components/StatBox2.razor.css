@@ -67,3 +67,7 @@ input[type=text] {
 .d-and-d-statbox label.label-top {
     margin-bottom: 0;
 }
+
+label {
+    margin-bottom: 0.5rem;
+}

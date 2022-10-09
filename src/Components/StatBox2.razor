@@ -1,14 +1,20 @@
 <div>
     <div class=@Classes>
         <div class="d-and-d-statbox-modifier">
-            <input type="text" @onchange="value => UpdateValue(value)" />
+            <input type="text" @onchange="value => UpdateValue(value)"  value="@Value"/>
         </div>
-        <div>
-            <label class="label-top">@TopLabel</label>
-        </div>
-        <div>
-            <label>@Label</label>
-        </div>
+        @if (!string.IsNullOrWhiteSpace(TopLabel))
+        {
+            <div>
+                <label class="label-top">@TopLabel</label>
+            </div>
+        }
+        @if (!string.IsNullOrWhiteSpace(Label))
+        {
+            <div>
+                <label>@Label</label>
+            </div>
+        }
     </div>
 </div>
 @code {
@@ -16,13 +22,12 @@
 
     [Parameter]
     public int Value { get; set; }
+    
     [Parameter]
-    public string Name { get; set; }
-    [Parameter]
-    public string Label { get; set; }
+    public string Label { get; set; } = "";
 
     [Parameter]
-    public string TopLabel { get; set; }
+    public string TopLabel { get; set; } = "";
 
     private string classes = StatBoxClassCss;
     [Parameter]
@@ -38,7 +43,5 @@
         int.TryParse((string)args.Value, out var value);
         await ValueChanged.InvokeAsync(value);
     }
-
-    public int Modifier => (int)Math.Floor((Value - 10) / 2.0);
 
 }
