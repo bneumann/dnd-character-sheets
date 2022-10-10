@@ -123,4 +123,79 @@
   <data name="ClassLevel" xml:space="preserve">
     <value>Class &amp; Level</value>
   </data>
+  <data name="Background" xml:space="preserve">
+    <value>Background</value>
+  </data>
+  <data name="PlayerName" xml:space="preserve">
+    <value>Player Name</value>
+  </data>
+  <data name="DeathSave" xml:space="preserve">
+    <value>Death Save</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="AttackBonus" xml:space="preserve">
+    <value>AtkBonus</value>
+  </data>
+  <data name="DamageType" xml:space="preserve">
+    <value>Damage/Type Range</value>
+  </data>
+  <data name="Successes" xml:space="preserve">
+    <value>Successes</value>
+  </data>
+  <data name="Failures" xml:space="preserve">
+    <value>Failures</value>
+  </data>
+  <data name="AttacksSpellcasting" xml:space="preserve">
+    <value>Attacks &amp; Spellcasting</value>
+  </data>
+  <data name="Equipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="CP" xml:space="preserve">
+    <value>CP</value>
+  </data>
+  <data name="SP" xml:space="preserve">
+    <value>SP</value>
+  </data>
+  <data name="EP" xml:space="preserve">
+    <value>EP</value>
+  </data>
+  <data name="GP" xml:space="preserve">
+    <value>GP</value>
+  </data>
+  <data name="PP" xml:space="preserve">
+    <value>PP</value>
+  </data>
+  <data name="HitDice" xml:space="preserve">
+    <value>Hit Dice</value>
+  </data>
+  <data name="Armour" xml:space="preserve">
+    <value>Armour</value>
+  </data>
+  <data name="Initiative" xml:space="preserve">
+    <value>Initiative</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="ProficienciesAndLanguages" xml:space="preserve">
+    <value>Other Proficiencies &amp; Languages</value>
+  </data>
+  <data name="PersonalityTraits" xml:space="preserve">
+    <value>Personality Traits</value>
+  </data>
+  <data name="Ideals" xml:space="preserve">
+    <value>Ideals</value>
+  </data>
+  <data name="Bonds" xml:space="preserve">
+	  <value>Bonds</value>
+  </data>
+  <data name="Flaws" xml:space="preserve">
+	  <value>Flaws</value>
+  </data>
+  <data name="FeaturesTraits" xml:space="preserve">
+	  <value>Features &amp; Traits</value>
+  </data>
 </root>

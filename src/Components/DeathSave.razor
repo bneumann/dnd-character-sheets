@@ -1,0 +1,40 @@
+﻿<div class="@Classes">
+    <label style="text-align: left">@Label</label>
+    <div style="display: inline-block">
+        <div class="@ActiveIfOver(1)" @onclick="() => UpdateValue(1)"/>
+        =
+        <div class="@ActiveIfOver(2)" @onclick="() => UpdateValue(2)"/>
+        =
+        <div class="@ActiveIfOver(3)" @onclick="() => UpdateValue(3)"/>
+    </div>
+</div>
+
+@code {
+
+    private const string DeathSaveClassCss = "d-and-d-deathsave";
+
+    private string classes = DeathSaveClassCss;
+
+    [Parameter]
+    public string Classes
+    {
+        get => classes;
+        set => classes = $"{DeathSaveClassCss} {value}";
+    }
+
+    [Parameter]
+    public string Label { get; set; } = "";
+
+    [Parameter]
+    public int Value { get; set; }
+
+    [Parameter]
+    public EventCallback<int> ValueChanged { get; set; }
+    private async Task UpdateValue(int value)
+    {
+        await ValueChanged.InvokeAsync(value);
+    }
+
+    private string ActiveIfOver(int value) => Value >= value ? "d-and-d-skill-circle active" : "d-and-d-skill-circle";
+
+}

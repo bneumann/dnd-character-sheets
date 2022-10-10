@@ -1,0 +1,45 @@
+﻿@using DnDCharacterSheets.Resources
+@inject IStringLocalizer<Languages> Localizer;
+
+<table class="@Classes">
+    <thead>
+        <tr>
+            <th>@Localizer["Name"]</th>
+            <th style="width: 70px">@Localizer["AttackBonus"]</th>
+            <th>@Localizer["DamageType"]</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var attack in Attacks)
+        {
+
+            <tr>
+                <td>
+                    <input type="text" @bind-value="@attack.Name" />
+                </td>
+                <td>
+                    <input type="text" @bind-value="@attack.AttackBonus" />
+                </td>
+                <td>
+                    <input type="text" @bind-value="@attack.DamageType" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@code {
+    private string classes = AttackTableClassCss;
+    private const string AttackTableClassCss = "d-and-d-table";
+
+    [Parameter]
+    public string Classes
+    {
+        get => classes;
+        set => classes = $"{AttackTableClassCss} {value}";
+    }
+
+
+    [Parameter]
+    public List<Attack> Attacks { get; set; } = new(){new(), new(), new()};
+
+}

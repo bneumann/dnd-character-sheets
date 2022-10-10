@@ -118,9 +118,84 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CharacterName" xml:space="preserve">
-    <value>Character Name</value>
+	  <value>Charaktername</value>
   </data>
     <data name="ClassLevel" xml:space="preserve">
     <value>Klasse &amp; Stufe</value>
+  </data>
+  <data name="PlayerName" xml:space="preserve">
+	  <value>Spielername</value>
+  </data>
+  <data name="Background" xml:space="preserve">
+	  <value>Hintergrund</value>
+  </data>
+  <data name="DeathSave" xml:space="preserve">
+	  <value>Todesrettungen</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+	  <value>Name</value>
+  </data>
+  <data name="AttackBonus" xml:space="preserve">
+	  <value>Angriffs-bonus</value>
+  </data>
+  <data name="DamageType" xml:space="preserve">
+	  <value>Schaden/Type Reichweite</value>
+  </data>
+  <data name="Failures" xml:space="preserve">
+	  <value>Misserfolge</value>
+  </data>
+  <data name="Successes" xml:space="preserve">
+	  <value>Erfolge</value>
+  </data>
+  <data name="AttacksSpellcasting" xml:space="preserve">
+	  <value>Angriffe &amp; Zauberwirken</value>
+  </data>
+  <data name="Equipment" xml:space="preserve">
+	  <value>Ausrüstung</value>
+  </data>
+  <data name="CP" xml:space="preserve">
+	  <value>KM</value>
+  </data>
+  <data name="EP" xml:space="preserve">
+	  <value>EM</value>
+  </data>
+  <data name="GP" xml:space="preserve">
+	  <value>GM</value>
+  </data>
+  <data name="PP" xml:space="preserve">
+	  <value>PM</value>
+  </data>
+  <data name="SP" xml:space="preserve">
+	  <value>SM</value>
+  </data>
+  <data name="HitDice" xml:space="preserve">
+	  <value>Trefferwürfel</value>
+  </data>
+  <data name="ProficienciesAndLanguages" xml:space="preserve">
+	  <value>Sonstige Geübtheiten &amp; Sprachen</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+	  <value>Bewegungsrate</value>
+  </data>
+  <data name="Initiative" xml:space="preserve">
+	  <value>Initiative</value>
+  </data>
+  <data name="Armour" xml:space="preserve">
+	  <value>Rüstungsklasse</value>
+  </data>
+  <data name="PersonalityTraits" xml:space="preserve">
+	  <value>Persönlichkeitsmerkmale</value>
+  </data>
+  <data name="Ideals" xml:space="preserve">
+	  <value>Ideale</value>
+  </data>
+  <data name="Bonds" xml:space="preserve">
+	  <value>Bindungen</value>
+  </data>
+  <data name="Flaws" xml:space="preserve">
+	  <value>Mäkel</value>
+  </data>
+  <data name="FeaturesTraits" xml:space="preserve">
+	  <value>Merkmale &amp; Eigenschaften</value>
   </data>
 </root>

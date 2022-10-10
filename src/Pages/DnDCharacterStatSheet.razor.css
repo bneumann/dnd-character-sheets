@@ -138,85 +138,6 @@
 
 }
 
-.d-and-d-character-sheet .d-and-d-deathsave {
-  margin: 5px 0;
-}
-.d-and-d-character-sheet .d-and-d-deathsave label {
-  text-transform: uppercase;
-  width: 55px;
-  text-align: right;
-  margin-right: 10px;
-}
-.d-and-d-character-sheet .d-and-d-deathsave .d-and-d-skill-circle {
-  height: 12px;
-  width: 12px;
-}
-
-.d-and-d-character-sheet .d-and-d-save-success .d-and-d-skill-circle.active {
-  background-color: rgb(0, 50, 255)
-}
-.d-and-d-character-sheet .d-and-d-save-failure .d-and-d-skill-circle.active {
-  background-color: rgb(204, 10, 33)
-}
-
-.d-and-d-character-sheet .d-and-d-table {
-  margin-bottom: 3px;
-}
-.d-and-d-character-sheet .d-and-d-table thead {
-  color: rgb(100, 100, 100);
-  text-transform: uppercase;
-}
-.d-and-d-character-sheet .d-and-d-table input {
-  background-color: rgb(225, 225, 225);
-  border-radius: 5px;
-  padding: 2px 5px;
-  margin: 1px 0;
-}
-
-
-.d-and-d-character-sheet .d-and-d-currency {
-  position: relative;
-  margin: 10px 0 20px;
-}
-.d-and-d-character-sheet .d-and-d-currency:last-child {
-  margin-bottom: 0;
-}
-.d-and-d-character-sheet .d-and-d-currency .d-and-d-currency-label {
-  margin-left: -10px;
-  border: 2px solid black;
-  background-color: white;
-  border-radius: 50% 0 0 50%;
-  width: 50px;
-  z-index: 0;
-  padding: 5px;
-  font-size: 12px;
-  display: inline-block;
-}
-.d-and-d-character-sheet .d-and-d-currency .d-and-d-currency-label label {
-  margin: 0;
-  font-weight: bold;
-  color: rgb(100, 100, 100);
-}
-.d-and-d-character-sheet .d-and-d-currency .d-and-d-currency-value {
-  border: 2px solid black;
-  background-color: white;
-  width: 90px;
-  height: 45px;
-  border-top-left-radius: 15px 50%;
-  border-bottom-left-radius: 15px 50%;
-  border-top-right-radius: 15px 50%;
-  border-bottom-right-radius: 15px 50%;
-  z-index: 1;
-  position: absolute;
-  top: -5px;
-  left: 15px;
-}
-.d-and-d-character-sheet .d-and-d-currency .d-and-d-currency-value input {
-  margin: 3px 0;
-  padding: 6px 0;
-  text-align: center;
-  font-size: 14px;
-}
 
 .d-and-d-character-sheet .d-and-d-equipment-indent::first-line, .d-and-d-character-sheet .d-and-d-equipment-indent::nth-line(-n+2) {
   text-indent: 200px;
@@ -226,32 +147,6 @@
 .d-and-d-character-sheet .border-right {
   border-right: 1px solid rgb(207, 207, 207);
 }
-
-/* .d-and-d-character-sheet .d-and-d-faction-input {
-  position: absolute;
-  text-align: center;
-  top: 10px;
-  left: 50%;
-  margin-left: 25%;
-  width: 50%;
-}
-
-.d-and-d-character-sheet .d-and-d-faction-input label {
-  text-transform: uppercase;
-  color: rgb(150, 150, 150);
-  margin-bottom: 0;
-  font-weight: bold;
-}
-
-.d-and-d-character-sheet .d-and-d-faction-input input {
-  background-color: rgb(225, 225, 225);
-  border-top-left-radius: 50px 100%;
-  border-top-right-radius: 50px 100%;
-  padding: 5px 5px;
-  margin: 1px 0;
-  text-align: center;
-  font-size: 14px;
-} */
 
 .d-and-d-character-sheet .d-and-d-attribute-collection .d-and-d-statbox {
   height: auto;

@@ -7,9 +7,8 @@ public static class DnDCharacterSheetExtensions
 {
     public static IServiceCollection AddDnDCharacterSheets(this IServiceCollection serviceCollection)
     {
-        serviceCollection
+        return  serviceCollection
             .AddSingleton<IStringLocalizerFactory, ResourceManagerStringLocalizerFactory>()
             .AddScoped(typeof(IStringLocalizer<>), typeof(StringLocalizer<>));
-        return serviceCollection;
     }
 }

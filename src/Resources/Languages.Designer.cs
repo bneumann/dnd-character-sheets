@@ -61,6 +61,51 @@ namespace DnDCharacterSheets.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Armour.
+        /// </summary>
+        internal static string Armour {
+            get {
+                return ResourceManager.GetString("Armour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AtkBonus.
+        /// </summary>
+        internal static string AttackBonus {
+            get {
+                return ResourceManager.GetString("AttackBonus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attacks &amp; Spellcasting.
+        /// </summary>
+        internal static string AttacksSpellcasting {
+            get {
+                return ResourceManager.GetString("AttacksSpellcasting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Background.
+        /// </summary>
+        internal static string Background {
+            get {
+                return ResourceManager.GetString("Background", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bonds.
+        /// </summary>
+        internal static string Bonds {
+            get {
+                return ResourceManager.GetString("Bonds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Character Name.
         /// </summary>
         internal static string CharacterName {
@@ -75,6 +120,186 @@ namespace DnDCharacterSheets.Resources {
         internal static string ClassLevel {
             get {
                 return ResourceManager.GetString("ClassLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CP.
+        /// </summary>
+        internal static string CP {
+            get {
+                return ResourceManager.GetString("CP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Damage/Type Range.
+        /// </summary>
+        internal static string DamageType {
+            get {
+                return ResourceManager.GetString("DamageType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Death Save.
+        /// </summary>
+        internal static string DeathSave {
+            get {
+                return ResourceManager.GetString("DeathSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EP.
+        /// </summary>
+        internal static string EP {
+            get {
+                return ResourceManager.GetString("EP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Equipment.
+        /// </summary>
+        internal static string Equipment {
+            get {
+                return ResourceManager.GetString("Equipment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failures.
+        /// </summary>
+        internal static string Failures {
+            get {
+                return ResourceManager.GetString("Failures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string FeaturesTraits {
+            get {
+                return ResourceManager.GetString("FeaturesTraits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flaws.
+        /// </summary>
+        internal static string Flaws {
+            get {
+                return ResourceManager.GetString("Flaws", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GP.
+        /// </summary>
+        internal static string GP {
+            get {
+                return ResourceManager.GetString("GP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hit Dice.
+        /// </summary>
+        internal static string HitDice {
+            get {
+                return ResourceManager.GetString("HitDice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ideals.
+        /// </summary>
+        internal static string Ideals {
+            get {
+                return ResourceManager.GetString("Ideals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Initiative.
+        /// </summary>
+        internal static string Initiative {
+            get {
+                return ResourceManager.GetString("Initiative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Personality Traits.
+        /// </summary>
+        internal static string PersonalityTraits {
+            get {
+                return ResourceManager.GetString("PersonalityTraits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player Name.
+        /// </summary>
+        internal static string PlayerName {
+            get {
+                return ResourceManager.GetString("PlayerName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PP.
+        /// </summary>
+        internal static string PP {
+            get {
+                return ResourceManager.GetString("PP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other Proficiencies &amp; Languages.
+        /// </summary>
+        internal static string ProficienciesAndLanguages {
+            get {
+                return ResourceManager.GetString("ProficienciesAndLanguages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SP.
+        /// </summary>
+        internal static string SP {
+            get {
+                return ResourceManager.GetString("SP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speed.
+        /// </summary>
+        internal static string Speed {
+            get {
+                return ResourceManager.GetString("Speed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successes.
+        /// </summary>
+        internal static string Successes {
+            get {
+                return ResourceManager.GetString("Successes", resourceCulture);
             }
         }
     }

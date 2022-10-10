@@ -1,0 +1,54 @@
+﻿input[type=text] {
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+.d-and-d-currency {
+    position: relative;
+    margin: 10px 0 20px;
+}
+
+.d-and-d-currency:last-child {
+    margin-bottom: 0;
+}
+
+.d-and-d-currency .d-and-d-currency-label {
+    margin-left: -20px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 50% 0 0 50%;
+    width: 50px;
+    z-index: 0;
+    padding: 5px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.d-and-d-currency .d-and-d-currency-label label {
+    margin: 0;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+}
+
+.d-and-d-currency .d-and-d-currency-value {
+    border: 2px solid black;
+    background-color: white;
+    width: 90px;
+    height: 45px;
+    border-top-left-radius: 15px 50%;
+    border-bottom-left-radius: 15px 50%;
+    border-top-right-radius: 15px 50%;
+    border-bottom-right-radius: 15px 50%;
+    z-index: 1;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+}
+
+.d-and-d-currency .d-and-d-currency-value input {
+    margin: 3px 0;
+    padding: 6px 0;
+    text-align: center;
+    font-size: 14px;
+}
