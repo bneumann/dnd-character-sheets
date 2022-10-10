@@ -1,3 +1,8 @@
+@using Microsoft.Extensions.Localization
+@using DnDCharacterSheets.Resources
+
+@inject IStringLocalizer<Languages> Localizer;
+
 <div class="d-and-d-character-sheet container-xl mt-5 mb-5">
     <div>
         <div class="row mb-4">
@@ -6,14 +11,14 @@
                 <div class="d-and-d-attribute-collection char-name pe-3 ps-3">
                     <input type="text" @bind-value="@Character.Name" />
                 </div>
-                <label style="width: 100%; text-align: right; text-transform: uppercase; font-size: 11px">Character Name</label>
+                <label style="width: 100%; text-align: right; text-transform: uppercase; font-size: 11px">@Localizer["CharacterName"]</label>
             </div>
             <div class="col-md-9 pe-2 ps-2">
                 <div class="d-and-d-attribute-collection pe-3 ps-3" style="height: 140px">
                     <div class="row ps-3 pe-3">
                         <div class="col-md-3 col-6 ps-0 pe-0">
                             <input type="text" @bind-value="@Character.ClassLevel" />
-                            <label>Class & Level</label>
+                            <label>@Localizer["ClassLevel"]</label>
                         </div>
                         <div class="col-md-3 col-6 ps-0 pe-0">
                             <input type="text" @bind-value="@Character.Background" />
@@ -139,6 +144,19 @@
                     <div class="d-and-d-box white mb-2 pb-2" style="border-radius: 0 0 8px 8px;">
                         <input class="d-and-d-cinput" type="text" @bind-value="@Character.TempHp" />
                         <label class="d-and-d-title mt-1">Temporary Hit Points</label>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="col-6 pe-1">
+                            <div class="d-and-d-box white mb-0 pb-1">
+                                <div class="d-and-d-gray-text">
+                                    <label style="width:25px">Total</label>
+                                    <input class="d-and-d-linput" style="width: calc(100% - 30px)" type="text" @bind-value="@Character.HitDiceMax" />
+                                </div>
+                                <input class="d-and-d-cinput" type="text" @bind-value="@Character.HitDice" />
+                                <label class="d-and-d-title">Hit Dice</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
