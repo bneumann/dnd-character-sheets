@@ -12,8 +12,8 @@
         character = await storage.Read();
     }
 
-    private async Task SaveCharacter(DnDCharacter character)
+    private void SaveCharacter(DnDCharacter character)
     {
-        await storage.Save(character);
+        storage.Save(character);
     }
 }

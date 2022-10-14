@@ -27,11 +27,12 @@
 
     [Parameter]
     public int Value { get; set; }
-
     [Parameter]
     public EventCallback<int> ValueChanged { get; set; }
+
     private async Task UpdateValue(int value)
     {
+        value = value == Value ? 0 : value;
         await ValueChanged.InvokeAsync(value);
     }
 

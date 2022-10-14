@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Annotations;
 
-public class DnDCharacter : INotifyPropertyChanged
+public class DnDCharacter : INotifyPropertyChanged, IDnDCharacter
 {
     private string name;
     private string classLevel;
