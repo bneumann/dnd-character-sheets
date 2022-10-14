@@ -1,3 +1,20 @@
 ﻿@page "/profile"
+@using DnDCharacterSheets
+@inject SessionStorage storage;
 
-<DnDCharacterProfileSheet />
+
+<DnDCharacterProfileSheet Character="@character" CharacterChanged="SaveCharacter"/>
+@code
+{
+    private DnDCharacter? character = new();
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("Loaded");
+        character = await storage.Read();
+    }
+
+    private async Task SaveCharacter(DnDCharacter character)
+    {
+        await storage.Save(character);
+    }
+}

@@ -1,126 +1,142 @@
+@using Microsoft.AspNetCore.Components.Forms
+@using System.ComponentModel
+
 <div class="d-and-d-character-sheet container-xl mt-5 mb-5">
-  <div>
-    <div class="row mb-4">
-      <div class="col-md-3 ps-2 pe-2" >
-          <div class="d-and-d-page-title">D&D</div>
-          <div class="d-and-d-attribute-collection char-name pe-3 ps-3">
-            <input type="text" @bind-value="@Character.Name"/>
-          </div>
-          <label style="width: 100%; text-align: right; text-transform: uppercase; font-size: 11px">Character Name</label>
-      </div>
-      <div class="col-md-9 pe-2 ps-2" >
-        <div class="d-and-d-attribute-collection pe-3 ps-3" style="height: 140px">
-          <div class="row ps-3 pe-3">
-            <div class="col-md-4 col-6 ps-0 pe-0">
-              <input type="text" @bind-value="@Character.Age"/>
-              <label>Age</label>
+    <div>
+        @Character.Name
+        <div class="row mb-4">
+            <div class="col-md-3 ps-2 pe-2">
+                <div class="d-and-d-page-title">D&D</div>
+                <div class="d-and-d-attribute-collection char-name pe-3 ps-3">
+                    <input type="text" @bind="@Character.Name" />
+                </div>
+                <label style="width: 100%; text-align: right; text-transform: uppercase; font-size: 11px">Character Name</label>
             </div>
-            <div class="col-md-4 col-6 ps-0 pe-0">
-              <input type="text" @bind-value="@Character.Height"/>
-              <label>Height</label>
+            <div class="col-md-9 pe-2 ps-2">
+                <div class="d-and-d-attribute-collection pe-3 ps-3" style="height: 140px">
+                    <div class="row ps-3 pe-3">
+                        <div class="col-md-4 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.Age" />
+                            <label>Age</label>
+                        </div>
+                        <div class="col-md-4 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.Height" />
+                            <label>Height</label>
+                        </div>
+                        <div class="col-md-4 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.Weight" />
+                            <label>Weight</label>
+                        </div>
+                    </div>
+                    <div class="row ps-3 pe-3">
+                        <div class="col-md-4 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.Eyes" />
+                            <label>Eyes</label>
+                        </div>
+                        <div class="col-md-4 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.Skin" />
+                            <label>Skin</label>
+                        </div>
+                        <div class="col-md-4 col-6 ps-0 pe-0">
+                            <input type="text" @bind-value="@Character.Hair" />
+                            <label>Hair</label>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 col-6 ps-0 pe-0">
-              <input type="text" @bind-value="@Character.Weight"/>
-              <label>Weight</label>
-            </div>
-          </div>
-          <div class="row ps-3 pe-3">
-            <div class="col-md-4 col-6 ps-0 pe-0">
-              <input type="text" @bind-value="@Character.Eyes"/>
-              <label>Eyes</label>
-            </div>
-            <div class="col-md-4 col-6 ps-0 pe-0">
-              <input type="text" @bind-value="@Character.Skin"/>
-              <label>Skin</label>
-            </div>
-            <div class="col-md-4 col-6 ps-0 pe-0">
-              <input type="text" @bind-value="@Character.Hair"/>
-              <label>Hair</label>
-            </div>
-          </div>
         </div>
-      </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="d-and-d-box square">
+                    <Image Name="appearance" Appearance="Character.Appearance" />
+                    <label class="d-and-d-title" style="margin-top: 10px">
+                        Character Appearance
+                    </label>
+                </div>
+
+                <div class="d-and-d-box mt-3">
+                    <textarea style="padding-bottom: 5px" @bind="Character.Backstory" @bind:event="oninput" rows="26"></textarea>
+                    <label class="d-and-d-title" style="margin-top: 10px">
+                        Character Backstory
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="d-and-d-box">
+                    <div class="row">
+                        <div class="col-md-6 border-right">
+                            <div class="d-and-d-gray-text" style="padding-bottom: 1px">
+                                <label style="width: 70px">Faction Rank</label>
+                                <input class="d-and-d-linput" type="text" @bind-value="@Character.FactionRank" />
+                            </div>
+                            <textarea style="padding-bottom: 5px" @bind="@Character.Allies" @bind:event="oninput" rows="16"></textarea>
+                        </div>
+
+                        <div class="col-md-6">
+                            <Faction>
+                                <Image Classes="faction" Name="factionImg" Appearance="Character.FactionImg" />
+                            </Faction>
+                            <textarea style="padding-bottom: 5px" @bind="@Character.Allies2" @bind:event="oninput" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <label class="d-and-d-title" style="margin-top: 10px">
+                        Allies & Organisations
+                    </label>
+                </div>
+
+                <div class="d-and-d-box mt-3">
+                    <div class="row">
+                        <div class="col-md-6 border-right">
+                            <textarea style="padding-bottom: 5px" @bind="@Character.AdditionalFeatures" @bind:event="oninput" rows="13"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <textarea style="padding-bottom: 5px" @bind="@Character.AdditionalFeatures2" @bind:event="oninput" rows="13"></textarea>
+                        </div>
+                    </div>
+
+                    <label class="d-and-d-title" style="margin-top: 10px">
+                        Additional Features & Traits
+                    </label>
+                </div>
+                <div class="d-and-d-box mt-3">
+                    <div class="row">
+                        <div class="col-md-6 border-right">
+                            <StatRow Classes="m-2 rounded rounded-sides wide-input" @bind-Value="@Character.TotalNonConsumableMagicItems" Label="Total Non-Consumable Magic Items" />
+                            <textarea style="padding-bottom: 5px; margin-top: 2px" @bind="@Character.Treasure" @bind:event="oninput" rows="8"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <textarea style="padding-bottom: 5px; margin-top: 4px" @bind="@Character.Treasure2" @bind:event="oninput" rows="10"></textarea>
+                        </div>
+                    </div>
+
+                    <label class="d-and-d-title" style="margin-top: 4px">
+                        Treasure
+                    </label>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="row">
-      <div class="col-md-4">
-        <div class="d-and-d-box square">
-          <Image Name="appearance" Appearance="Character.Appearance"/>
-          <label class="d-and-d-title" style="margin-top: 10px">
-            Character Appearance
-          </label>
-        </div>
-
-        <div class="d-and-d-box mt-3">
-          <textarea style="padding-bottom: 5px" @bind="Character.Backstory" @bind:event="oninput" rows="26"></textarea>
-          <label class="d-and-d-title" style="margin-top: 10px">
-            Character Backstory
-          </label>
-        </div>
-      </div>
-
-      <div class="col-md-8">
-        <div class="d-and-d-box">
-          <div class="row">
-            <div class="col-md-6 border-right">
-              <div class="d-and-d-gray-text" style="padding-bottom: 1px">
-                <label style="width: 70px">Faction Rank</label>
-                <input class="d-and-d-linput" type="text" @bind-value="@Character.FactionRank"/>
-              </div>
-              <textarea style="padding-bottom: 5px" @bind="@Character.Allies" @bind:event="oninput" rows="16"></textarea>
-            </div>
-
-            <div class="col-md-6">
-              <Faction>
-                <Image Classes="faction" Name="factionImg" Appearance="Character.FactionImg"/>
-              </Faction>
-              <textarea style="padding-bottom: 5px" @bind="@Character.Allies2" @bind:event="oninput" rows="3"></textarea>
-            </div>
-          </div>
-          <label class="d-and-d-title" style="margin-top: 10px">
-            Allies & Organisations
-          </label>
-        </div>
-
-        <div class="d-and-d-box mt-3">
-          <div class="row">
-            <div class="col-md-6 border-right">
-              <textarea style="padding-bottom: 5px" @bind="@Character.AdditionalFeatures" @bind:event="oninput" rows="13"></textarea>
-            </div>
-            <div class="col-md-6">
-              <textarea style="padding-bottom: 5px" @bind="@Character.AdditionalFeatures2" @bind:event="oninput" rows="13"></textarea>
-            </div>
-          </div>
-
-          <label class="d-and-d-title" style="margin-top: 10px">
-            Additional Features & Traits
-          </label>
-        </div>
-        <div class="d-and-d-box mt-3">
-          <div class="row">
-            <div class="col-md-6 border-right">
-              <StatRow Classes="m-2 rounded rounded-sides wide-input" @bind-Value="@Character.TotalNonConsumableMagicItems" Label="Total Non-Consumable Magic Items"/>
-              <textarea style="padding-bottom: 5px; margin-top: 2px" @bind="@Character.Treasure" @bind:event="oninput" rows="8"></textarea>
-            </div>
-            <div class="col-md-6">
-              <textarea style="padding-bottom: 5px; margin-top: 4px" @bind="@Character.Treasure2" @bind:event="oninput" rows="10"></textarea>
-            </div>
-          </div>
-
-          <label class="d-and-d-title" style="margin-top: 4px">
-            Treasure
-          </label>
-        </div>
-      </div>
-    </div>
-  </div>
-  @PrintCharacter
-
 </div>
 
 @code {
 
-  public DnDCharacter Character { get; set; } = new();
+    private DnDCharacter character = new();
 
-  private string PrintCharacter => System.Text.Json.JsonSerializer.Serialize(Character.TotalNonConsumableMagicItems);
+    [Parameter]
+    public DnDCharacter Character
+    {
+        get => character;
+        set { character = value; character.PropertyChanged += UpdateCharacter; }
+    }
+
+    [Parameter]
+    public EventCallback<DnDCharacter> CharacterChanged { get; set; }
+
+    private void UpdateCharacter(object? sender, PropertyChangedEventArgs e)
+    {
+        CharacterChanged.InvokeAsync(Character);
+    }
+
 }

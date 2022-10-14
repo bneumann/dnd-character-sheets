@@ -1,9 +1,9 @@
-﻿@page "/stats"
+﻿@page "/spells"
 @using DnDCharacterSheets
 @inject SessionStorage storage;
 
-<DnDCharacterStatSheet Character="character"  CharacterChanged="SaveCharacter"/>
 
+<DnDCharacterSpellSheet Character="@character" CharacterChanged="SaveCharacter"/>
 @code
 {
     private DnDCharacter? character = new();
@@ -12,8 +12,8 @@
         character = await storage.Read();
     }
 
-    private async Task SaveCharacter(DnDCharacter character)
+    private void SaveCharacter(DnDCharacter character)
     {
-        await storage.Save(character);
+        storage.Save(character);
     }
 }

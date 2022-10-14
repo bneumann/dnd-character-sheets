@@ -198,4 +198,31 @@
   <data name="FeaturesTraits" xml:space="preserve">
 	  <value>Features &amp; Traits</value>
   </data>
+  <data name="SpellCastingClass" xml:space="preserve">
+	  <value>Spell Casting Class</value>
+  </data>
+  <data name="PreparedSpells" xml:space="preserve">
+	  <value>Prepared Spells</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+	  <value>Total</value>
+  </data>
+  <data name="SpellSaveDC" xml:space="preserve">
+	  <value>Spell Save DC</value>
+  </data>
+  <data name="SpellAttack" xml:space="preserve">
+	  <value>Spell Attack</value>
+  </data>
+  <data name="Bonus" xml:space="preserve">
+	  <value>Bonus</value>
+  </data>
+  <data name="SpellLevel" xml:space="preserve">
+	  <value>Spell Level</value>
+  </data>
+  <data name="SlotsTotal" xml:space="preserve">
+	  <value>Slots Total</value>
+  </data>
+  <data name="SlotsRemaining" xml:space="preserve">
+	  <value>Slots Remaining</value>
+  </data>
 </root>

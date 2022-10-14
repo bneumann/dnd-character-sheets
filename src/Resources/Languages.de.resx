@@ -198,4 +198,13 @@
   <data name="FeaturesTraits" xml:space="preserve">
 	  <value>Merkmale &amp; Eigenschaften</value>
   </data>
+  <data name="PreparedSpells" xml:space="preserve">
+	  <value>Vorbereitete Zauber</value>
+  </data>
+  <data name="Bonus" xml:space="preserve">
+	  <value>Bonus</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+	  <value>Gesamt</value>
+  </data>
 </root>

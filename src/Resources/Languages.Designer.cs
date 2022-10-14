@@ -106,6 +106,15 @@ namespace DnDCharacterSheets.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Bonus {
+            get {
+                return ResourceManager.GetString("Bonus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Character Name.
         /// </summary>
         internal static string CharacterName {
@@ -178,7 +187,7 @@ namespace DnDCharacterSheets.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Features &amp; Traits.
         /// </summary>
         internal static string FeaturesTraits {
             get {
@@ -268,11 +277,38 @@ namespace DnDCharacterSheets.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string PreparedSpells {
+            get {
+                return ResourceManager.GetString("PreparedSpells", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Other Proficiencies &amp; Languages.
         /// </summary>
         internal static string ProficienciesAndLanguages {
             get {
                 return ResourceManager.GetString("ProficienciesAndLanguages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SlotsRemaining {
+            get {
+                return ResourceManager.GetString("SlotsRemaining", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SlotsTotal {
+            get {
+                return ResourceManager.GetString("SlotsTotal", resourceCulture);
             }
         }
         
@@ -295,11 +331,56 @@ namespace DnDCharacterSheets.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SpellAttack {
+            get {
+                return ResourceManager.GetString("SpellAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SpellCastingClass {
+            get {
+                return ResourceManager.GetString("SpellCastingClass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SpellLevel {
+            get {
+                return ResourceManager.GetString("SpellLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string SpellSaveDC {
+            get {
+                return ResourceManager.GetString("SpellSaveDC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Successes.
         /// </summary>
         internal static string Successes {
             get {
                 return ResourceManager.GetString("Successes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Total {
+            get {
+                return ResourceManager.GetString("Total", resourceCulture);
             }
         }
     }

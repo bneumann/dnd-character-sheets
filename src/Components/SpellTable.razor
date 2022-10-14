@@ -1,0 +1,147 @@
+﻿@inject IStringLocalizer<Languages> Localizer;
+
+<div class=@Classes>
+    @if (ShowLabels)
+    {
+        <div class="d-and-d-spell-header-labels">
+            <label style="width: 20px">@Localizer["SpellLevel"]</label>
+            <label style="width: 75px">@Localizer["SlotsTotal"]</label>
+            <label style="width: calc(100% - 95px)">@Localizer["SlotsRemaining"]</label>
+        </div>
+    }
+    <div class="d-and-d-spell-header">
+        <div class="d-and-d-spell-level">@Level</div>
+        <div class="d-and-d-spell-slots">
+            @if (Level == 0)
+            {
+                <label>@Localizer["Cantrips"]</label>
+            }
+            else
+            {
+                <div class="d-and-d-spell-slots-total">
+                    <input type="text" value="@SlotsValue" @onchange="value => UpdateSlotsValue(value)" />
+                </div>
+                <div class="d-and-d-spell-slots-remaining">
+                    @for (var i = 1; i <= SlotsValue; i++)
+                    {
+                        var index = i;
+                        <div class="@SlotActive(index)" @onclick="() => UpdateSlotsUsedValue(index)"></div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+
+    <table>
+        @if (ShowLabels)
+        {
+            <thead>
+                <tr>
+                    <th style="width: 30px; position: absolute; left: -7px">@Localizer["Prepared"]</th>
+                    <th>@Localizer["SpellName"]</th>
+                </tr>
+            </thead>
+        }
+        <tbody>
+            @foreach (var spell in Value)
+            {
+                <tr>
+                    @if (Level > 0)
+                    {
+                        <td class="d-and-d-spell-prepared">
+                            <div class="@IsPrepared(spell)" @onclick="() => PrepareSpell(spell)"></div>
+                        </td>
+                    }
+                    <td>
+                        <input type="text" value="@spell.Name" @onchange="value => UpdateSpellName(spell, value)" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+
+    private string SlotActive(int slotIndex) => $"d-and-d-skill-circle {(SlotsUsedValue >= slotIndex ? "active" : "")}";
+    private string IsPrepared(Spell spell) => $"d-and-d-skill-circle {(spell.Prepared ? "active" : "")}";
+    private const string SpellTableClassCss = "d-and-d-spelllist";
+
+    [Parameter]
+    public bool ShowLabels { get; set; }
+
+    [Parameter]
+    public int Level { get; set; }
+
+    [Parameter]
+    public int Rows { get; set; }
+
+    [Parameter]
+    public List<Spell> Value { get; set; } = new();
+
+    [Parameter]
+    public EventCallback<List<Spell>> ValueChanged { get; set; }
+
+    [Parameter]
+    public string style { get; set; } = "";
+
+    private string classes = SpellTableClassCss;
+
+    [Parameter]
+    public string Classes
+    {
+        get => classes;
+        set => classes = $"{SpellTableClassCss} {value}";
+    }
+
+    [Parameter]
+    public int SlotsValue { get; set; } = 6;
+
+    [Parameter]
+    public EventCallback<int> SlotsValueChanged { get; set; }
+
+    [Parameter]
+    public int SlotsUsedValue { get; set; } = 0;
+
+    [Parameter]
+    public EventCallback<int> SlotsUsedValueChanged { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        if (Value is {Count: 0 })
+        {
+            for (var r = 0; r < Rows; r++)
+            {
+                Value.Add(new Spell());
+            }
+        }
+        base.OnParametersSet();
+    }
+
+    private async Task UpdateSlotsValue(ChangeEventArgs args)
+    {
+        int.TryParse((string)args.Value, out var value);
+        await SlotsValueChanged.InvokeAsync(value);
+    }
+
+    private async Task UpdateSlotsUsedValue(int slotIndex)
+    {
+        var usedSlotsValue = slotIndex == SlotsUsedValue ? 0 : slotIndex;
+        await SlotsUsedValueChanged.InvokeAsync(usedSlotsValue);
+    }
+
+
+    private async Task PrepareSpell(Spell spell)
+    {
+        spell.Prepared = !spell.Prepared;
+        await ValueChanged.InvokeAsync(new List<Spell>(Value));
+    }
+
+    private async Task UpdateSpellName(Spell spell, ChangeEventArgs args)
+    {
+        var value = (string)args.Value;
+        spell.Name = value;
+        await ValueChanged.InvokeAsync(new List<Spell>(Value));
+    }
+
+}
