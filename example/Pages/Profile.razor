@@ -2,8 +2,8 @@
 @using DnDCharacterSheets
 @inject SessionStorage storage;
 
-
 <DnDCharacterProfileSheet Character="@character" CharacterChanged="SaveCharacter"/>
+
 @code
 {
     private DnDCharacter? character = new();
