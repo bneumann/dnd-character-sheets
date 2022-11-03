@@ -32,5 +32,3 @@ jobs:
 
     - name: Push
       run: dotnet nuget push DnDCharacterSheets.${GITVERSION_NUGETVERSIONV2}.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source github
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
