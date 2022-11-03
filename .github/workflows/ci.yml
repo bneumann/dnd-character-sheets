@@ -1,4 +1,5 @@
 name: continouos-integration
+run-name: continouos-integration by @${{ github.actor }}
 on:
   push:
     paths:
