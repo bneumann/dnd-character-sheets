@@ -3,8 +3,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Authors>Benjamin Giesinger</Authors>
+    <PackageDescription>This package contains DnD Character Sheets for blazor</PackageDescription>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/bneumann/dnd-character-sheets</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="\"/>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
   <ItemGroup>

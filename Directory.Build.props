@@ -1,0 +1,11 @@
+<Project>
+ <PropertyGroup>
+    <LangVersion>10.0</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+ </PropertyGroup>
+ <PropertyGroup>
+    <OutputPath>../build</OutputPath>
+ </PropertyGroup>
+ <ItemGroup>
+  </ItemGroup>
+</Project>
