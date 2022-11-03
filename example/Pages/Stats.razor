@@ -1,0 +1,19 @@
+﻿@page "/stats"
+@using DnDCharacterSheets
+@inject SessionStorage storage;
+
+<DnDCharacterStatSheet Character="character"  CharacterChanged="SaveCharacter"/>
+
+@code
+{
+    private DnDCharacter? character = new();
+    protected override async Task OnInitializedAsync()
+    {
+        character = await storage.Read();
+    }
+
+    private void SaveCharacter(DnDCharacter character)
+    {
+        storage.Save(character);
+    }
+}

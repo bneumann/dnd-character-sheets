@@ -1,89 +1,9 @@
-# DnDCharacterSheets
+namespace DnDCharacterSheets;
 
-> Dungeons and Dragons 5th Edition character sheets created in Blazor.
+using System.ComponentModel;
 
-This is a port of the amazing ReactJS DnD Character sheets by Daryl Buckle [https://github.com/DarylBuckle/dnd-character-sheets](https://github.com/DarylBuckle/dnd-character-sheets)
-
-
-<img width="600" alt="Screenshot 2020-09-06 at 19 35 55" src="https://user-images.githubusercontent.com/15156674/92332881-adbfee80-f078-11ea-8bcc-82cfb6484465.png">
-
-
-## Contents
-
-- [DnDCharacterSheets](#dndcharactersheets)
-  - [Contents](#contents)
-  - [About](#about)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Props](#props)
-  - [DnDCharacter Class](#dndcharacter-class)
-  - [License](#license)
-
-
-## About
-
-Blazor components that render Dungeons & Dragons character sheets, namely a character stats sheet, character profile sheet and spell sheet.
-
-The attributes in the example can be populated on the web page and outputs to print nicely, so you can populate some attributes on the page and print the sheet. Characters can also be exported to a json file and imported from a json file.
-
-
-## Install
-
-```bash
-dotnet add package DnDCharacterSheets
-```
-
-## Usage
-
-```c#
-@page "/profile"
-@using DnDCharacterSheets
-@inject SessionStorage storage;
-
-<DnDCharacterProfileSheet Character="@character" CharacterChanged="SaveCharacter"/>
-
-@code
-{
-    private DnDCharacter? character = new();
-    protected override async Task OnInitializedAsync()
-    {
-        character = await storage.Read();
-    }
-
-    private void SaveCharacter(DnDCharacter character)
-    {
-        storage.Save(character);
-    }
-}
-
-```
-
-```DnDCharacterStatsSheet``` renders a stats sheet.
-
-```DnDCharacterProfileSheet``` renders a character traits sheet.
-
-```DnDCharacterSpellSheet``` renders a spell sheet.
-
-
-## Props
-
-Each component accepts the same props.
-
-Each component can be controlled or uncontrolled. Either character and onCharacterChanged should be specified (controlled), or defaultCharacter should be specified.
-
-| Property           | Type                           | Description                                                                                                              |
-| ------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| defaultCharacter   | DnDCharacter                   | An instance of the DnDCharacter class. If character is not set the sheet will initialize with the values specified here. |
-| character          | DnDCharacter                   | An instance of the DnDCharacter class. If set the sheet will always use the values specified here.                       |
-| onCharacterChanged | func (character: DnDCharacter) | Called whenever a value in a sheet is changed. A modified DnDCharacter object is returned.                               |
-
-
-## DnDCharacter Class
-
-The DnDCharacter class holds the attributes of a character. The attributes are shown below. I kept it almost compatible with the ReactJS version.
-
-```c#
-public class DnDCharacter
+#pragma warning disable CS8618
+public interface IDnDCharacter
 {
     string Name { get; set; }
     string ClassLevel { get; set; }
@@ -224,10 +144,6 @@ public class DnDCharacter
     int Lvl9SpellSlotsTotal { get; set; }
     int Lvl9SpellSlotsUsed { get; set; }
     List<Spell> Lvl9Spells { get; set; }
+    int Int { get; set; }
+    event PropertyChangedEventHandler? PropertyChanged;
 }
-```
-
-
-## License
-
-MIT © [Daryl Buckle](https://github.com/DarylBuckle) 2020

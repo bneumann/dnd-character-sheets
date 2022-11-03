@@ -1,0 +1,37 @@
+<div>
+  <div class=@Classes>
+        <label>@Label</label>
+        <div class="d-and-d-statbox-modifier">@Modifier</div>
+    </div>
+    <div class="d-and-d-statbox-value">
+        <input type="text" @onchange="value => UpdateValue(value)" value="@Value"/>
+    </div>
+</div>
+@code {
+    private const string StatBoxClassCss = "d-and-d-statbox";
+
+    [Parameter]
+    public int Value { get; set; }
+    [Parameter]
+    public string Name { get; set; }
+    [Parameter]
+    public string Label { get; set; }
+
+    private string classes = StatBoxClassCss;
+    [Parameter]
+    public string Classes
+    {
+        get => classes;
+        set => classes = $"{StatBoxClassCss} {value}";
+    }
+    [Parameter]
+    public EventCallback<int> ValueChanged { get; set; }
+    private async Task UpdateValue(ChangeEventArgs args)
+    {
+        int.TryParse((string)args.Value, out var value);
+        await ValueChanged.InvokeAsync(value);
+    }
+
+    public int Modifier => (int)Math.Floor((Value - 10) / 2.0);
+
+}

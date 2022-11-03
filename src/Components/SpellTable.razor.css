@@ -1,0 +1,131 @@
+input[type=text] {
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+.d-and-d-skill-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.d-and-d-skill-circle.active {
+  background-color: rgb(207, 207, 207);
+}
+
+
+.d-and-d-spelllist {
+  margin-bottom: 30px;
+}
+
+.d-and-d-spelllist .d-and-d-spell-header {
+  border: 2px solid black;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-level {
+  position: absolute;
+  border: 2px solid black;
+  background-color: white;
+  width: 30px;
+  border-top-right-radius: 15px 50%;
+  border-bottom-right-radius: 15px 50%;
+  height: calc(100% + 10px);
+  font-size: 16px;
+  padding: 8px 0 8px 7px;
+  left: -5px;
+  top: -5px;
+}
+
+.d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots {
+  width: 100%;
+  padding-left: 30px;
+  height: 36px;
+}
+
+.d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots label {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots .d-and-d-spell-slots-total {
+  width: 60px;
+  display: inline-block;
+  font-size: 16px;
+  border-right: 2px solid black;
+  border-top-right-radius: 15px 50%;
+  border-bottom-right-radius: 15px 50%;
+  padding: 5px 5px 5px 0;
+}
+
+.d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots .d-and-d-spell-slots-total input {
+  text-align: center;
+  width: 55px;
+}
+
+.d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots .d-and-d-spell-slots-remaining {
+  display: inline-block;
+  width: calc(100% - 70px);
+  text-align: center;
+  height: 100%;
+  vertical-align: top;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.d-and-d-spelllist .d-and-d-spell-header .d-and-d-spell-slots .d-and-d-spell-slots-remaining .d-and-d-skill-circle {
+  margin: 0 3px;
+}
+
+.d-and-d-spelllist table {
+  width: 100%;
+  position: relative;
+}
+
+.d-and-d-spelllist table .d-and-d-skill-circle {
+  margin-left: 3px;
+}
+
+.d-and-d-spelllist table th {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 6px;
+}
+
+.d-and-d-spelllist table tr input {
+  width: 100%;
+  border-bottom: 1px solid rgb(150, 150, 150);
+  font-size: 15px;
+}
+
+.d-and-d-spelllist table .d-and-d-spell-prepared {
+  width: 25px;
+}
+
+.d-and-d-spell-header-labels{
+  flex-direction: row;
+  display: flex;
+}
+
+.d-and-d-spelllist .d-and-d-spell-header-labels div {
+  display: inline-block;
+}
+
+.d-and-d-spelllist .d-and-d-spell-header-labels label {
+  align-self: flex-end;
+  padding-bottom: 5px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 6px;
+}

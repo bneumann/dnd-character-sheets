@@ -1,0 +1,167 @@
+.d-and-d-character-sheet {
+    font-size: 10px;
+}
+
+    .d-and-d-character-sheet input[type=text] {
+        background: none;
+        border: none;
+        width: 100%;
+    }
+
+    .d-and-d-character-sheet .d-and-d-page-title {
+        font-size: 42px;
+        text-align: center;
+        color: rgb(204, 10, 33);
+        font-weight: bold;
+        font-family: cursive;
+    }
+
+    .d-and-d-character-sheet textarea {
+        line-height: 25px;
+        background-image: linear-gradient(transparent, transparent calc(25px - 1px), rgb(207, 207, 207) 0px);
+        background-size: 100% calc(25px + 0px);
+        width: 100%;
+        border: none;
+        resize: none;
+        background-position-y: -2px;
+    }
+
+    .d-and-d-character-sheet .d-and-d-box {
+        border: 2px solid black;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+        .d-and-d-character-sheet .d-and-d-box.noborder {
+            border: none;
+        }
+
+        .d-and-d-character-sheet .d-and-d-box.square {
+            border-radius: 0px;
+        }
+
+        .d-and-d-character-sheet .d-and-d-box.white {
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .d-and-d-character-sheet .d-and-d-box.gray {
+            background-color: rgb(207, 207, 207);
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+.d-and-d-box .d-and-d-title {
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: bold;
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+
+
+.d-and-d-character-sheet .d-and-d-attribute-collection {
+    border: 2px solid black;
+    border-top-left-radius: 15px 50%;
+    border-bottom-left-radius: 15px 50%;
+    border-top-right-radius: 15px 50%;
+    border-bottom-right-radius: 15px 50%;
+    padding-bottom: 5px;
+    background-color: white;
+}
+
+    .d-and-d-character-sheet .d-and-d-attribute-collection.gray {
+        background-color: rgb(207, 207, 207);
+    }
+
+    .d-and-d-character-sheet .d-and-d-attribute-collection input {
+        border-bottom: 1px solid black;
+        width: 100%;
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    .d-and-d-character-sheet .d-and-d-attribute-collection label {
+        text-transform: uppercase;
+    }
+
+@media (min-width: 768px) {
+    .d-and-d-character-sheet .d-and-d-attribute-collection.char-name {
+        width: calc(100% + 50px);
+    }
+}
+
+
+.d-and-d-character-sheet .d-and-d-attribute-collection.char-name input {
+    padding-left: 10px;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-bottom: none;
+}
+
+.d-and-d-character-sheet .d-and-d-statbox.shield {
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+    .d-and-d-character-sheet .d-and-d-statbox.shield .d-and-d-statbox-modifier input {
+        margin-bottom: 2px;
+    }
+
+.d-and-d-character-sheet .d-and-d-statbox label.label-top {
+    margin-bottom: 0;
+}
+
+.d-and-d-character-sheet input.d-and-d-cinput {
+    text-align: center;
+    font-size: 24px;
+    margin: 0px 0;
+}
+
+.d-and-d-character-sheet input.d-and-d-linput {
+    border: none;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.d-and-d-character-sheet .d-and-d-gray-text {
+    color: rgb(100, 100, 100);
+}
+
+    .d-and-d-character-sheet .d-and-d-gray-text input.d-and-d-linput {
+        border-bottom: 1px solid rgb(207, 207, 207);
+        flex-wrap: wrap;
+    }
+
+
+.d-and-d-character-sheet .d-and-d-equipment-indent::first-line, .d-and-d-character-sheet .d-and-d-equipment-indent::nth-line(-n+2) {
+    text-indent: 200px;
+}
+
+
+.d-and-d-character-sheet .border-right {
+    border-right: 1px solid rgb(207, 207, 207);
+}
+
+.d-and-d-character-sheet .d-and-d-attribute-collection .d-and-d-statbox {
+    height: auto;
+}
+
+    .d-and-d-character-sheet .d-and-d-attribute-collection .d-and-d-statbox input {
+        border: none;
+    }
+
+    .d-and-d-character-sheet .d-and-d-attribute-collection .d-and-d-statbox.type2 {
+        margin-bottom: 5px;
+    }
+
+* {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}

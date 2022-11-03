@@ -1,0 +1,14 @@
+<div class="d-and-d-box gray noborder" style="margin-bottom: 13px">
+    <div class="d-and-d-faction-input">
+        <label>Faction</label>
+        <input type="text" @bind-value="@Name" />
+        @ChildContent
+    </div>
+</div>
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter] public string Name { get; set; } = "";
+
+
+}

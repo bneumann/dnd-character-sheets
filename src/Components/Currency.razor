@@ -1,0 +1,22 @@
+﻿<div class="d-and-d-currency">
+    <div class="d-and-d-currency-label">
+        <label>@Label</label>
+    </div>
+    <div class="d-and-d-currency-value">
+        <input type="text" @onchange="args => UpdateValue(args)" value="@Value"/>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int Value { get; set; }
+    [Parameter]
+    public string Label { get; set; }
+    [Parameter]
+    public EventCallback<int> ValueChanged { get; set; }
+    private async Task UpdateValue(ChangeEventArgs args)
+    {
+        int.TryParse((string)args.Value, out var value);
+        await ValueChanged.InvokeAsync(value);
+    }
+}

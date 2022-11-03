@@ -1,0 +1,47 @@
+<div>
+    <div class=@Classes>
+        <div class="d-and-d-statbox-modifier">
+            <input type="text" @onchange="value => UpdateValue(value)"  value="@Value"/>
+        </div>
+        @if (!string.IsNullOrWhiteSpace(TopLabel))
+        {
+            <div>
+                <label class="label-top">@TopLabel</label>
+            </div>
+        }
+        @if (!string.IsNullOrWhiteSpace(Label))
+        {
+            <div>
+                <label>@Label</label>
+            </div>
+        }
+    </div>
+</div>
+@code {
+    private const string StatBoxClassCss = "d-and-d-statbox type2";
+
+    [Parameter]
+    public int Value { get; set; }
+    
+    [Parameter]
+    public string Label { get; set; } = "";
+
+    [Parameter]
+    public string TopLabel { get; set; } = "";
+
+    private string classes = StatBoxClassCss;
+    [Parameter]
+    public string Classes
+    {
+        get => classes;
+        set => classes = $"{StatBoxClassCss} {value}";
+    }
+    [Parameter]
+    public EventCallback<int> ValueChanged { get; set; }
+    private async Task UpdateValue(ChangeEventArgs args)
+    {
+        int.TryParse((string)args.Value, out var value);
+        await ValueChanged.InvokeAsync(value);
+    }
+
+}

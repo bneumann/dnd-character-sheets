@@ -1,0 +1,21 @@
+﻿.d-and-d-table {
+    margin-bottom: 3px;
+}
+
+.d-and-d-table thead {
+    color: rgb(100, 100, 100);
+    text-transform: uppercase;
+}
+
+input[type=text] {
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+.d-and-d-table input {
+    background-color: rgb(225, 225, 225);
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin: 1px 0;
+}

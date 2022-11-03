@@ -1,0 +1,33 @@
+﻿.d-and-d-skill-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.d-and-d-deathsave .d-and-d-skill-circle {
+    height: 12px;
+    width: 12px;
+}
+
+.d-and-d-save-success .d-and-d-skill-circle.active {
+    background-color: rgb(0, 50, 255)
+}
+
+.d-and-d-save-failure .d-and-d-skill-circle.active {
+    background-color: rgb(204, 10, 33)
+}
+
+.d-and-d-deathsave {
+    margin: 5px 0;
+}
+
+.d-and-d-deathsave label {
+    text-transform: uppercase;
+    width: 55px;
+    text-align: right;
+    margin-right: 10px;
+}

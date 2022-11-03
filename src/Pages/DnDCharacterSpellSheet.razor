@@ -1,0 +1,83 @@
+@using System.ComponentModel
+
+@inject IStringLocalizer<Languages> Localizer;
+
+
+<div class="d-and-d-character-sheet container-xl mt-5 mb-5">
+    <div>
+        <div class="row mb-4">
+            <div class="col-md-3 ps-2 pe-2">
+                <div class="d-and-d-page-title">D&D</div>
+                <div class="d-and-d-attribute-collection char-name pe-3 ps-3">
+                    <input type="text" @bind-value="@Character.SpellcastingClass" />
+                </div>
+                <label style="width: 100%; text-align: right; text-transform: uppercase; font-size: 11px">@Localizer["SpellCastingClass"]</label>
+            </div>
+            <div class="col-md-9 pe-2 ps-2 mt-2">
+                <div class="d-and-d-attribute-collection gray pe-3 ps-3" style="height: 140px">
+                    <div class="row ps-3 pe-3">
+                        <div class="col-4 ps-4 pe-4">
+                            <StatBox2 @bind-Value="Character.PreparedSpellsTotal" />
+                            <label style="text-transform: none; width: 100%; text-align: center" class="mb-0">@Localizer["PreparedSpells"]</label>
+                            <label style="text-transform: none; width: 100%; text-align: center" class="mb-0">@Localizer["Total"]</label>
+                        </div>
+                        <div class="col-4 ps-4 pe-4">
+                            <StatBox2 @bind-Value="Character.SpellSaveDC" />
+                            <label style="text-transform: none; width: 100%; text-align: center" class="mb-0">@Localizer["SpellSaveDC"]</label>
+                        </div>
+                        <div class="col-4 ps-4 pe-4">
+                            <StatBox2 @bind-Value="Character.SpellAttackBonus" />
+                            <label style="text-transform: none; width: 100%; text-align: center" class="mb-0">@Localizer["SpellAttack"]</label>
+                            <label style="text-transform: none; width: 100%; text-align: center" class="mb-0">@Localizer["Bonus"]</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="d-and-d-box">
+                    <SpellTable Level="0" Rows="9" @bind-Value="@Character.Cantrips" style="margin-bottom: 23px"/>
+                    <SpellTable Level="1" Rows="12" ShowLabels @bind-Value="@Character.Lvl1Spells" @bind-SlotsValue="@Character.Lvl1SpellSlotsTotal" @bind-SlotsUsedValue="@Character.Lvl1SpellSlotsUsed" />
+                    <SpellTable Level="2" Rows="13" @bind-Value="@Character.Lvl2Spells" @bind-SlotsValue="@Character.Lvl2SpellSlotsTotal" @bind-SlotsUsedValue="@Character.Lvl2SpellSlotsUsed" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-and-d-box">
+                    <SpellTable Level="3" Rows="13" @bind-Value="@Character.Lvl3Spells" @bind-SlotsValue="@Character.Lvl4SpellSlotsTotal" @bind-SlotsUsedValue="@Character.Lvl4SpellSlotsUsed" />
+                    <SpellTable Level="4" Rows="13" @bind-Value="@Character.Lvl4Spells" @bind-SlotsValue="@Character.Lvl5SpellSlotsTotal" @bind-SlotsUsedValue="@Character.Lvl5SpellSlotsUsed" />
+                    <SpellTable Level="5" Rows="9" @bind-Value="@Character.Lvl5Spells" @bind-SlotsValue="@Character.Lvl6SpellSlotsTotal" @bind-SlotsUsedValue="@Character.Lvl6SpellSlotsUsed" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-and-d-box">
+                    <SpellTable Level="6" Rows="9" @bind-Value="@Character.Lvl6Spells" @bind-SlotsValue="@Character.Lvl6SpellSlotsTotal" @bind-SlotsUsedValue="@Character.Lvl6SpellSlotsUsed" />
+                    <SpellTable Level="7" Rows="9" @bind-Value="@Character.Lvl7Spells" @bind-SlotsValue="@Character.Lvl7SpellSlotsTotal" @bind-SlotsUsedValue="@Character.Lvl7SpellSlotsUsed" />
+                    <SpellTable Level="8" Rows="7" @bind-Value="@Character.Lvl8Spells" @bind-SlotsValue="@Character.Lvl8SpellSlotsTotal" @bind-SlotsUsedValue="@Character.Lvl8SpellSlotsUsed" />
+                    <SpellTable Level="9" Rows="7" @bind-Value="@Character.Lvl9Spells" @bind-SlotsValue="@Character.Lvl9SpellSlotsTotal" @bind-SlotsUsedValue="@Character.Lvl9SpellSlotsUsed" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public DnDCharacter Character
+    {
+        get => character;
+        set { character = value; character.PropertyChanged += UpdateCharacter; }
+    }
+    
+    [Parameter]
+    public EventCallback<DnDCharacter> CharacterChanged { get; set; }
+
+    private void UpdateCharacter(object? sender, PropertyChangedEventArgs e)
+    {
+        CharacterChanged.InvokeAsync(Character);
+    }
+
+    private DnDCharacter character = new();
+    }

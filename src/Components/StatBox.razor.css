@@ -1,0 +1,56 @@
+.d-and-d-statbox {
+  font-size: 7px;
+  background-color: white;
+  font-weight: bold;
+  border: 2px solid black;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+  margin: 5px 0 20px;
+  height: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.d-and-d-statbox.type2 {
+  margin-top: 0px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin: 5px 0 10px;
+}
+
+.d-and-d-statbox .d-and-d-statbox-modifier {
+  text-align: center;
+  font-size: 24px;
+}
+
+.d-and-d-statbox .d-and-d-statbox-modifier input {
+  text-align: center;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.d-and-d-statbox-value {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 60%;
+  margin: -40px auto 20px;
+  left: 0;
+  right: 0;
+}
+
+.d-and-d-statbox-value input {
+  text-align: center;
+  font-size: 14px;
+}
+
+input[type=text] {
+  background: none;
+  border: none;
+  width: 100%;
+}
