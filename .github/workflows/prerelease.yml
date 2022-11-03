@@ -15,6 +15,8 @@ jobs:
 
     - name: Determine Version
       uses: gittools/actions/gitversion/execute@v0.9.7
+      with:
+        useConfigFile: true
 
     - name: Build
       run: dotnet build --configuration Release /p:Version=${GITVERSION_NUGETVERSIONV2} src/DnDCharacterSheets.csproj
