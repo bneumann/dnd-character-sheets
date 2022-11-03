@@ -20,7 +20,7 @@ jobs:
 
 
     - name: Build
-      run: dotnet build --configuration Release src/DnDCharacterSheets.csproj
+      run: dotnet build --configuration Release /p:Version=${GITVERSION_NUGETVERSIONV2} src/DnDCharacterSheets.csproj
 
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=${GITVERSION_NUGETVERSIONV2} --no-build --output .
