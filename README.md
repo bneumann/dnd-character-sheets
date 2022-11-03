@@ -37,7 +37,7 @@ dotnet add package DnDCharacterSheets
 
 ```c#
 @page "/profile"
-@using DnDCharacterSheets
+@using DnDCharacterSheets.Pages
 @inject SessionStorage storage;
 
 <DnDCharacterProfileSheet Character="@character" CharacterChanged="SaveCharacter"/>
