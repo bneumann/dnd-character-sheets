@@ -3,6 +3,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Authors>Benjamin Giesinger</Authors>
+    <PackageDescription>This package contains DnD Character Sheets for blazor</PackageDescription>
+    <RepositoryUrl>https://nuget.pkg.github.com/bneumann/index.json</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
     <SupportedPlatform Include="browser" />
