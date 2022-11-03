@@ -9,7 +9,7 @@
     <RepositoryUrl>https://github.com/bneumann/dnd-character-sheets</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="../README.md" Pack="true" PackagePath="\"/>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
   <ItemGroup>

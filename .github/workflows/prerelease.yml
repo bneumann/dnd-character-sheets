@@ -27,8 +27,5 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=${GITVERSION_NUGETVERSIONV2} --no-build --output .
 
-    # - name: AuthenticateNuget
-    #   run: dotnet nuget add source --username USERNAME --password ${{ secrets.NUGET_API_KEY }} --store-password-in-clear-text --name nuget-push "https://api.nuget.org/v3/index.json"
-
     - name: Push
       run: dotnet nuget push DnDCharacterSheets.${GITVERSION_NUGETVERSIONV2}.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
