@@ -1,4 +1,5 @@
 name: pre-release build
+run-name: pre-release build by @${{ github.actor }}
 on: push
 jobs:
   build:
