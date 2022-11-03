@@ -15,7 +15,7 @@ This is a port of the amazing ReactJS DnD Character sheets by Daryl Buckle [http
   - [About](#about)
   - [Install](#install)
   - [Usage](#usage)
-  - [Props](#props)
+  - [Property changes and notifications](#property-changes-and-notifications)
   - [DnDCharacter Class](#dndcharacter-class)
   - [License](#license)
 
@@ -38,6 +38,7 @@ dotnet add package DnDCharacterSheets
 ```c#
 @page "/profile"
 @using DnDCharacterSheets.Pages
+@using DnDCharacterSheets
 @inject SessionStorage storage;
 
 <DnDCharacterProfileSheet Character="@character" CharacterChanged="SaveCharacter"/>
@@ -65,17 +66,11 @@ dotnet add package DnDCharacterSheets
 ```DnDCharacterSpellSheet``` renders a spell sheet.
 
 
-## Props
+## Property changes and notifications
 
-Each component accepts the same props.
+Each component accesses the same base DTO `DnDCharacter` in the `DnDCharacterSheets` namespace. The class implements the `INotifyPropertyChanged` interface and raises an event `PropertyChanged` when any field is updated. Unlike the React implementation this has a drawback in terms of performance. You always get the complete DTO instead of single fields.
 
-Each component can be controlled or uncontrolled. Either character and onCharacterChanged should be specified (controlled), or defaultCharacter should be specified.
-
-| Property           | Type                           | Description                                                                                                              |
-| ------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| defaultCharacter   | DnDCharacter                   | An instance of the DnDCharacter class. If character is not set the sheet will initialize with the values specified here. |
-| character          | DnDCharacter                   | An instance of the DnDCharacter class. If set the sheet will always use the values specified here.                       |
-| onCharacterChanged | func (character: DnDCharacter) | Called whenever a value in a sheet is changed. A modified DnDCharacter object is returned.                               |
+The changes are reflected in the Blazor component by using the `CharacterChanged` attribute. See example to utilise it for persisting the data.
 
 
 ## DnDCharacter Class
@@ -230,4 +225,4 @@ public class DnDCharacter
 
 ## License
 
-MIT © [Daryl Buckle](https://github.com/DarylBuckle) 2020
+MIT © [Benjamin Giesinger](https://github.com/bneumann) 2022
