@@ -1,5 +1,5 @@
+name: pre-release build
 on: push
-
 jobs:
   build:
     runs-on: ubuntu-latest
