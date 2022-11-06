@@ -68,7 +68,12 @@
     public DnDCharacter Character
     {
         get => character;
-        set { character = value; character.PropertyChanged += UpdateCharacter; }
+        set
+        {
+            character.PropertyChanged -= UpdateCharacter;
+            character = value;
+            character.PropertyChanged += UpdateCharacter;
+        }
     }
     
     [Parameter]

@@ -226,11 +226,17 @@
 
 @code {
 
+
     [Parameter]
     public DnDCharacter Character
     {
         get => character;
-        set { character = value; character.PropertyChanged += UpdateCharacter; }
+        set
+        {
+            character.PropertyChanged -= UpdateCharacter;
+            character = value;
+            character.PropertyChanged += UpdateCharacter;
+        }
     }
 
     [Parameter]
@@ -238,6 +244,7 @@
 
     private void UpdateCharacter(object? sender, PropertyChangedEventArgs e)
     {
+        Console.WriteLine(e.PropertyName);
         CharacterChanged.InvokeAsync(Character);
     }
 
